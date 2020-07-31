@@ -9,10 +9,19 @@ import SwiftUI
 
 struct EPaperView: View {
     
+    @State private var clickOn: String? = nil
+
     var body: some View {
-        
-        Text("EPaper View")
-            .font(.largeTitle)
+        NavigationView {
+            VStack(spacing: 30) {
+                NavigationLink(destination: BookmarkView(), tag: "BookmarkView", selection: $clickOn) {
+                    Button("Tap to show Bookmark") {
+                        self.clickOn = "BookmarkView"
+                    }.font(.largeTitle)
+                }
+            }
+            .navigationBarTitle(Text("EPaper"), displayMode: .inline)
+        }
     }
 }
 

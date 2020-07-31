@@ -18,6 +18,7 @@
 		A934F77B24D470200000A893 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934F77A24D470200000A893 /* SplashView.swift */; };
 		A934F77D24D491310000A893 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934F77C24D491310000A893 /* ArticleView.swift */; };
 		A934F77F24D496660000A893 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934F77E24D496660000A893 /* BookmarkView.swift */; };
+		A934F78324D4C36C0000A893 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934F78224D4C36C0000A893 /* ActivityIndicator.swift */; };
 		A9678E5924D4312500BCEFAC /* SwiftUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9678E5824D4312500BCEFAC /* SwiftUIExampleApp.swift */; };
 		A9678E5D24D4312600BCEFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9678E5C24D4312600BCEFAC /* Assets.xcassets */; };
 		A9678E6024D4312600BCEFAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9678E5F24D4312600BCEFAC /* Preview Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		A934F77A24D470200000A893 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		A934F77C24D491310000A893 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		A934F77E24D496660000A893 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		A934F78224D4C36C0000A893 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A9678E5524D4312500BCEFAC /* SwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9678E5824D4312500BCEFAC /* SwiftUIExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleApp.swift; sourceTree = "<group>"; };
 		A9678E5C24D4312600BCEFAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				A934F77A24D470200000A893 /* SplashView.swift */,
-				A934F76D24D4626F0000A893 /* TabBarView.swift */,
+				A934F78424D4C42D0000A893 /* common scenes */,
 				A934F76F24D46F070000A893 /* HomeView.swift */,
 				A934F77124D46F3E0000A893 /* LatestView.swift */,
 				A934F77724D46F730000A893 /* DiscoverView.swift */,
@@ -140,6 +142,15 @@
 				A934F77E24D496660000A893 /* BookmarkView.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A934F78424D4C42D0000A893 /* common scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A934F76D24D4626F0000A893 /* TabBarView.swift */,
+				A934F78224D4C36C0000A893 /* ActivityIndicator.swift */,
+			);
+			path = "common scenes";
 			sourceTree = "<group>";
 		};
 		A9678E4C24D4312500BCEFAC = {
@@ -408,6 +419,7 @@
 				A934F77024D46F070000A893 /* HomeView.swift in Sources */,
 				A934F76E24D4626F0000A893 /* TabBarView.swift in Sources */,
 				A9678E5924D4312500BCEFAC /* SwiftUIExampleApp.swift in Sources */,
+				A934F78324D4C36C0000A893 /* ActivityIndicator.swift in Sources */,
 				A934F77224D46F3E0000A893 /* LatestView.swift in Sources */,
 				A934F77F24D496660000A893 /* BookmarkView.swift in Sources */,
 				A934F77824D46F730000A893 /* DiscoverView.swift in Sources */,

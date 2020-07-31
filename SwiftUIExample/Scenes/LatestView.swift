@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct LatestView: View {
+    @State private var clickOn: String? = nil
+
     var body: some View {
-        Text("Latest View")
-            .font(.largeTitle)
+        NavigationView {
+            VStack(spacing: 30) {
+                NavigationLink(destination: BookmarkView(), tag: "BookmarkView", selection: $clickOn) {
+                    Button("Tap to show Bookmark") {
+                        self.clickOn = "BookmarkView"
+                    }.font(.largeTitle)
+                }
+            }
+            .navigationBarTitle(Text("LATEST"), displayMode: .inline)
+        }
     }
 }
 

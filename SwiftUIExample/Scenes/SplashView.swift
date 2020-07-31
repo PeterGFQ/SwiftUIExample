@@ -9,6 +9,9 @@ import SwiftUI
 
 struct SplashView: View {
     
+    @State private var fetchingAPIOrRemoteConfig = false
+    @State private var fetchDataSuccess = false
+
     var backgroundImage: some View {
         //Fixme, background image size is not fit
         Image("splashscreen")
@@ -18,17 +21,33 @@ struct SplashView: View {
     
     var body: some View {
         
-        ZStack {
+        VStack(alignment: .center) {
             Image("st_navbar_header")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(EdgeInsets.init(top: 50, leading: 20, bottom: 50, trailing: 20))
-                //            .frame(width: ., height: 50, alignment: .center)
-//                .background(backgroundImage)
-            backgroundImage
+            if fetchingAPIOrRemoteConfig {
+                ActivityIndicator(isAnimating: .constant(true), style: .medium)
+            }
         }
+        .background(backgroundImage)
+        .onAppear(perform: {
+            fetchingAPIOrRemoteConfig.toggle()
+            //Pretending fetching remote config
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                fetchDataSuccess.toggle()
+            }
+        }).fullScreenCover(isPresented: $fetchDataSuccess, content: {
+            TabBarView()
+        }).onDisappear(perform: {
+            //                    onBoardingViewsSeen = true
+        })
+//        .popover(isPresented: $fetchDataSuccess, content: {
+//            TabBarView()
+//        })
     }
 }
+
 
 
 #if DEBUG

@@ -9,9 +9,19 @@ import SwiftUI
 
 struct DiscoverView: View {
     
+    @State private var clickOn: String? = nil
+
     var body: some View {
-        Text("DISCOVER View")
-            .font(.largeTitle)
+        NavigationView {
+            VStack(spacing: 30) {
+                NavigationLink(destination: BookmarkView(), tag: "BookmarkView", selection: $clickOn) {
+                    Button("Tap to show Bookmark") {
+                        self.clickOn = "BookmarkView"
+                    }.font(.largeTitle)
+                }
+            }
+            .navigationBarTitle(Text("DISCOVER"), displayMode: .inline)
+        }
     }
 }
 
