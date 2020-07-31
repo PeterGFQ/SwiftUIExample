@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct SwiftUIExampleApp: App {
     
-    @State private var fetchSuccess = false
+    @State private var loading = true
     //Get it from user default, assign to the State instance wrapped value
 //    @State private var onBoardingViewsSeen = false
 
@@ -21,10 +21,10 @@ struct SwiftUIExampleApp: App {
                 .onAppear(perform: {
                     //Pretending fetching remote config
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        fetchSuccess.toggle()
+                        loading.toggle()
                     }
                 })
-                .fullScreenCover(isPresented: $fetchSuccess, content: {
+                .fullScreenCover(isPresented: $loading, content: {
                     TabBarView()
                 }).onDisappear(perform: {
 //                    onBoardingViewsSeen = true
@@ -36,8 +36,11 @@ struct SwiftUIExampleApp: App {
     }
 }
 
+
+#if DEBUG
 struct SwiftUIExampleApp_Previews: PreviewProvider {
     static var previews: some View {
         SplashView()
     }
 }
+#endif

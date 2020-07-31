@@ -15,8 +15,10 @@ struct DiscoverView: View {
     }
 }
 
+#if DEBUG
 struct DiscoverView_Previews: PreviewProvider {
     static var previews: some View {
         DiscoverView()
     }
 }
+#endif

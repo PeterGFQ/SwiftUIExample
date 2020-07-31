@@ -16,8 +16,10 @@ struct EPaperView: View {
     }
 }
 
+#if DEBUG
 struct EPaperView_Previews: PreviewProvider {
     static var previews: some View {
         EPaperView()
     }
 }
+#endif

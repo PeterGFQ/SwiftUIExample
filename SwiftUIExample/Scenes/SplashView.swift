@@ -18,15 +18,20 @@ struct SplashView: View {
     
     var body: some View {
         
-        Image("st_navbar_header")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .padding(EdgeInsets.init(top: 50, leading: 20, bottom: 50, trailing: 20))
-            //            .frame(width: ., height: 50, alignment: .center)
-            .background(backgroundImage)
+        ZStack {
+            Image("st_navbar_header")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(EdgeInsets.init(top: 50, leading: 20, bottom: 50, trailing: 20))
+                //            .frame(width: ., height: 50, alignment: .center)
+//                .background(backgroundImage)
+            backgroundImage
+        }
     }
 }
 
+
+#if DEBUG
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -37,3 +42,4 @@ struct SplashView_Previews: PreviewProvider {
         }
     }
 }
+#endif

@@ -13,8 +13,11 @@ struct LatestView: View {
             .font(.largeTitle)
     }
 }
+
+#if DEBUG
 struct LatestView_Previews: PreviewProvider {
     static var previews: some View {
         LatestView()
     }
 }
+#endif

@@ -14,8 +14,11 @@ struct BookmarkView: View {
     }
 }
 
+
+#if DEBUG
 struct BookmarkView_Previews: PreviewProvider {
     static var previews: some View {
         BookmarkView()
     }
 }
+#endif
