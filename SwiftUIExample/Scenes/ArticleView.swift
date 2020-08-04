@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ArticleView: View {
+    
+    @State var articleTitle: String = ""
+    
     var body: some View {
-        Text("Article detail page")
+        Text(articleTitle)
             .font(.largeTitle)
     }
 }

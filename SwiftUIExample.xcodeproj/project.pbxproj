@@ -24,6 +24,11 @@
 		A9678E6024D4312600BCEFAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9678E5F24D4312600BCEFAC /* Preview Assets.xcassets */; };
 		A9678E6B24D4312600BCEFAC /* SwiftUIExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9678E6A24D4312600BCEFAC /* SwiftUIExampleTests.swift */; };
 		A9678E7624D4312600BCEFAC /* SwiftUIExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9678E7524D4312600BCEFAC /* SwiftUIExampleUITests.swift */; };
+		A9C17F4324D9F8750071A762 /* PrimaryLabelViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C17F4224D9F8750071A762 /* PrimaryLabelViewModifier.swift */; };
+		A9C17F4724D9FFD20071A762 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C17F4624D9FFD20071A762 /* Article.swift */; };
+		A9C17F4A24DA026F0071A762 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C17F4924DA026F0071A762 /* ArticleListView.swift */; };
+		A9C17F4C24DA05330071A762 /* HeadlineViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C17F4B24DA05330071A762 /* HeadlineViewModifier.swift */; };
+		A9C17F4E24DA06330071A762 /* SubHeadlineViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C17F4D24DA06330071A762 /* SubHeadlineViewModifier.swift */; };
 		D094A70022DAE85CE60F70F9 /* Pods_SwiftUIExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441C4540849E00718A170FBC /* Pods_SwiftUIExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +76,11 @@
 		A9678E7124D4312600BCEFAC /* SwiftUIExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9678E7524D4312600BCEFAC /* SwiftUIExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleUITests.swift; sourceTree = "<group>"; };
 		A9678E7724D4312600BCEFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C17F4224D9F8750071A762 /* PrimaryLabelViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryLabelViewModifier.swift; sourceTree = "<group>"; };
+		A9C17F4624D9FFD20071A762 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		A9C17F4924DA026F0071A762 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		A9C17F4B24DA05330071A762 /* HeadlineViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineViewModifier.swift; sourceTree = "<group>"; };
+		A9C17F4D24DA06330071A762 /* SubHeadlineViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHeadlineViewModifier.swift; sourceTree = "<group>"; };
 		AA4007D5C0340BDAB273331C /* Pods-SwiftUIExample-SwiftUIExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIExample-SwiftUIExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIExample-SwiftUIExampleUITests/Pods-SwiftUIExample-SwiftUIExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF8857B9C03681E45E98C46 /* Pods-SwiftUIExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIExampleTests/Pods-SwiftUIExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C47A267AA7EFE2317D694B0B /* Pods-SwiftUIExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIExample.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIExample/Pods-SwiftUIExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,13 +143,10 @@
 			children = (
 				A934F77A24D470200000A893 /* SplashView.swift */,
 				A934F78424D4C42D0000A893 /* common scenes */,
-				A934F76F24D46F070000A893 /* HomeView.swift */,
-				A934F77124D46F3E0000A893 /* LatestView.swift */,
-				A934F77724D46F730000A893 /* DiscoverView.swift */,
-				A934F77524D46F680000A893 /* EPaperView.swift */,
-				A934F77324D46F520000A893 /* MenuView.swift */,
 				A934F77C24D491310000A893 /* ArticleView.swift */,
 				A934F77E24D496660000A893 /* BookmarkView.swift */,
+				A9C17F4824DA00FB0071A762 /* Tab Views */,
+				A9C17F4924DA026F0071A762 /* ArticleListView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -178,6 +185,8 @@
 		A9678E5724D4312500BCEFAC /* SwiftUIExample */ = {
 			isa = PBXGroup;
 			children = (
+				A9C17F4624D9FFD20071A762 /* Article.swift */,
+				A9C17F4124D9F8590071A762 /* View Modifiers */,
 				A934F77924D46F830000A893 /* Scenes */,
 				A9678E5824D4312500BCEFAC /* SwiftUIExampleApp.swift */,
 				A9678E5C24D4312600BCEFAC /* Assets.xcassets */,
@@ -211,6 +220,28 @@
 				A9678E7724D4312600BCEFAC /* Info.plist */,
 			);
 			path = SwiftUIExampleUITests;
+			sourceTree = "<group>";
+		};
+		A9C17F4124D9F8590071A762 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A9C17F4224D9F8750071A762 /* PrimaryLabelViewModifier.swift */,
+				A9C17F4B24DA05330071A762 /* HeadlineViewModifier.swift */,
+				A9C17F4D24DA06330071A762 /* SubHeadlineViewModifier.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		A9C17F4824DA00FB0071A762 /* Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				A934F76F24D46F070000A893 /* HomeView.swift */,
+				A934F77124D46F3E0000A893 /* LatestView.swift */,
+				A934F77724D46F730000A893 /* DiscoverView.swift */,
+				A934F77524D46F680000A893 /* EPaperView.swift */,
+				A934F77324D46F520000A893 /* MenuView.swift */,
+			);
+			path = "Tab Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,8 +445,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C17F4724D9FFD20071A762 /* Article.swift in Sources */,
+				A9C17F4A24DA026F0071A762 /* ArticleListView.swift in Sources */,
 				A934F77624D46F680000A893 /* EPaperView.swift in Sources */,
+				A9C17F4C24DA05330071A762 /* HeadlineViewModifier.swift in Sources */,
 				A934F77424D46F520000A893 /* MenuView.swift in Sources */,
+				A9C17F4324D9F8750071A762 /* PrimaryLabelViewModifier.swift in Sources */,
+				A9C17F4E24DA06330071A762 /* SubHeadlineViewModifier.swift in Sources */,
 				A934F77024D46F070000A893 /* HomeView.swift in Sources */,
 				A934F76E24D4626F0000A893 /* TabBarView.swift in Sources */,
 				A9678E5924D4312500BCEFAC /* SwiftUIExampleApp.swift in Sources */,

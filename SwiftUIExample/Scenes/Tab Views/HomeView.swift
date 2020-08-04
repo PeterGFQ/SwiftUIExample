@@ -9,15 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var clickOn: String? = nil
-    
+    @State var article: String = ""
+    @State private var presentArticleView = false
+
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
-                NavigationLink(destination: ArticleView(), tag: "Article", selection: $clickOn) {
-                    Button("Tap to show Article") {
-                        self.clickOn = "Article"
-                    }
+                
+                Button(action: {
+                    self.presentArticleView.toggle()
+                    self.article = "tapped from home tab"
+                }){
+                    Text("Tap to show Article")
+                }.sheet(isPresented: $presentArticleView){
+                    ArticleView(articleTitle: self.article)
+                }.fullScreenCover(isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

@@ -13,13 +13,7 @@ struct EPaperView: View {
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
-                NavigationLink(destination: BookmarkView(), tag: "BookmarkView", selection: $clickOn) {
-                    Button("Tap to show Bookmark") {
-                        self.clickOn = "BookmarkView"
-                    }.font(.largeTitle)
-                }
-            }
+            Text("EPaper View") .modifier(PrimaryLabelViewModifier(labelForegroundColor: .yellow, labelBackgroundColor: .red))
             .navigationBarTitle(Text("EPaper"), displayMode: .inline)
         }
     }
