@@ -23,9 +23,10 @@ struct HomeView: View {
                     Text("Tap to show Article")
                 }.sheet(isPresented: $presentArticleView){
                     ArticleView(articleTitle: self.article)
-                }.fullScreenCover(isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/) {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
                 }
+//                .fullScreenCover(isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+//                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+//                }
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading:
